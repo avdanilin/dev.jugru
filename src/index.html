@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JUG Ru Group — хардкорные встречи и конференции для IT-специалистов</title>
+	<!-- Favicons -->
+	<!-- Web-app manifest -->
+	<link rel="manifest" href="favicons/manifest.json"/>
+	<!-- Web-app manifest -->
+	
+	<link rel="icon" href="favicons/favicon-16x16.png" type="image/png" sizes="16x16">
+	
+	<!--AppleIcon-->
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png"/>
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png"/>
+	<!--AppleIcon-->
+	
+	<!--WinIcon-->
+	<meta name="application-name" content="jugru.org"/>
+	<meta name="msapplication-tooltip" content="JUG Ru Group — хардкорные встречи и конференции для IT-специалистов"/>
+	<meta name="msapplication-TileColor" content="#e5e5e5"/>
+	
+	<link as="style" rel="stylesheet preload prefetch" type="text/css" crossorigin="anonymous" href="fonts.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+	<article>
+		<section class="main">
+			<div class="container">
+				<div class="row">
+					<div class="lc">
+						<div class="logo__wrapper">
+							<img src="img/main/logo.svg" alt="JUG Ru Group">
+						</div>
+						<div class="h-block">
+							<h1>Конференции,<br> которые нужны</h1>
+							<p class="description">Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.<br>
+								С нас — крутая программа, топовые спикеры, технические доклады без воды.<br>
+								С вас — готовность смотреть и общаться.</p>
+						</div>
+						<div class="btns__wrapper">
+							<button class="btn btn-yellow" type="button" data-modal="want-know">Купить билет</button>
+							<button class="btn btn-black" type="button" data-modal="to-the-ass">Послать в жопу</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
+</main>
+<form id="want-know" class="modal">
+	<div class="modal-header">
+		<img src="img/icons/welcoming-person.svg" alt="Я хочу знать, когда будет офлайн">
+		<div class="modal-title">Я хочу знать, когда&nbsp;будет офлайн</div>
+	</div>
+	<div class="modal-body">
+		<fieldset>
+			<input type="email" placeholder="Укажите email" required="required">
+			<input class="btn btn-white btn-small bordered" type="submit" value="Подписаться">
+		</fieldset>
+	</div>
+	<div class="modal-footer">
+		<p class="agree">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a></p>
+	</div>
+</form>
+<form id="to-the-ass" class="modal">
+	<div class="modal-header">
+		<img src="img/icons/facepalm-person.svg" alt="Идите в жопу!">
+		<div class="modal-title">Идите в жопу!</div>
+	</div>
+	<div class="modal-body">
+		<fieldset>
+			<button class="btn btn-small btn-black w-border" type="submit">Вы свои цены видели?</button>
+			<button class="btn btn-small btn-black w-border" type="submit">Доклады ни о чем</button>
+			<button class="btn btn-small btn-black w-border" type="submit">У вас там всё хорошо?</button>
+			<button class="btn btn-small btn-black w-border" type="submit">Денег нет, но вы держитесь</button>
+		</fieldset>
+	</div>
+	<div class="modal-footer">
+		<p class="agree">Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a></p>
+	</div>
+</form>
+<script src="app.js"></script>
+</body>
+</html>

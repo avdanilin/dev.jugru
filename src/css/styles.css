@@ -1,0 +1,294 @@
+/*<editor-fold desc="variables">*/
+:root {
+	--main-color-white: #fff;
+	--main-color-black: #000;
+	--main-color-yellow: #fbcb03;
+	--second-color-yellow: #e6b901;
+	--second-color-black: rgba(0, 0, 0, .8);
+	--second-color-grey: #f8f8f8;
+	--rare-color-light-grey: rgba(0, 0, 0, .1);
+	--rare-color-grey: rgba(0, 0, 0, .32);
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="default">*/
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	max-width: 1320px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.description {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+.agree a,
+.agree {
+	font-weight: normal;
+	font-size: 12px;
+	color: var(--rare-color-grey);
+}
+
+input {
+	background: var(--second-color-grey);
+	border-radius: 12px;
+	font-weight: normal;
+	font-size: 14px;
+	border: unset;
+	padding: 16px 28px;
+}
+
+input::placeholder {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 130%;
+	color: var(--rare-color-grey);
+}
+
+.btn {
+	font-weight: 300;
+	font-size: 18px;
+	color: var(--main-color-black);
+	padding: 20px 40px;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color .3s ease-in-out, color .3s ease-in-out;
+	border: unset;
+}
+
+.btn.btn-white {
+	background-color: var(--main-color-white);
+}
+
+.btn.btn-white:hover {
+	color: var(--main-color-white);
+	background-color: var(--main-color-black);
+}
+
+.btn.btn-small {
+	font-size: 14px;
+	padding: 16px 34px;
+}
+
+.w-border,
+.bordered {
+	border: 1px solid var(--rare-color-grey);
+}
+
+.w-border {
+	border-color: var(--main-color-white);
+}
+
+.btn.btn-yellow {
+	background-color: var(--main-color-yellow);
+}
+
+.btn.btn-yellow:hover {
+	background-color: var(--second-color-yellow);
+}
+
+.btn.btn-black {
+	color: var(--main-color-white);
+	background-color: var(--main-color-black);
+}
+
+.btn.btn-black:hover {
+	background-color: var(--second-color-black);
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="sections">*/
+
+/*<editor-fold desc="section main">*/
+section.main {
+	position: relative;
+	padding: 150px 0 100px 0;
+	height: calc(100vh - 250px);
+	background: url("./img/main/main-bg.png") right bottom / 714px auto no-repeat;
+}
+
+section.main .container::after {
+	content: '';
+	position: absolute;
+	top: -21%;
+	right: 0;
+	max-width: 640px;
+	max-height: 770px;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background: repeating-linear-gradient(
+			var(--main-color-black),
+			var(--main-color-black) 100px,
+			transparent 100px,
+			transparent 200px
+	);
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	/*animation: translatePosition 70000s linear infinite;*/
+}
+
+section.main .logo__wrapper {
+	margin-bottom: 56px;
+}
+
+section.main .logo__wrapper {
+	max-width: 126px;
+	width: 100%;
+}
+
+section.main .container,
+section.main .container .row {
+	height: 100%;
+}
+
+section.main .lc {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-basis: 38.258%;
+}
+
+section.main h1 {
+	margin-bottom: 20px;
+}
+
+section.main .h-block {
+	margin-bottom: 90px;
+}
+
+section.main .btns__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+/*</editor-fold>*/
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="modal">*/
+.modal-backdrop {
+	background-color: rgba(255, 255, 255, .95);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 99;
+	transition: opacity .3s ease-in-out;
+}
+
+.modal {
+	display: none;
+	overflow: auto;
+	animation: fadeInTop .5s;
+	z-index: 100;
+	border: 1px solid var(--rare-color-light-grey);
+	border-radius: 20px;
+	background-color: var(--main-color-white);
+	max-height: 498px;
+	max-width: 610px;
+	min-height: 350px;
+	width: 100%;
+	height: 100%;
+	padding: 50px 50px 40px;
+	transition: opacity .3s ease-in-out;
+}
+
+.modal .modal-header {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 20px;
+}
+
+.modal .modal-body fieldset {
+	display: flex;
+	gap: 0 10px;
+}
+
+.modal .modal-body input:not([type='submit']) {
+	flex-basis: 50%;
+}
+
+
+.modal .modal-header img {
+	max-width: 60px;
+	width: 100%;
+}
+
+.modal .modal-title {
+	font-weight: 600;
+	font-size: 28px;
+	color: var(--main-color-black);
+	flex-basis: 300px;
+}
+
+.modal-footer {
+	display: flex;
+}
+
+.modal-footer .agree {
+	flex-basis: 250px;
+}
+
+#to-the-ass {
+	background-color: var(--main-color-black);
+}
+
+#to-the-ass .modal-title {
+	color: var(--main-color-white);
+}
+
+#to-the-ass fieldset {
+	flex-direction: column;
+}
+
+#to-the-ass button {
+	border-radius: 45px;
+}
+
+#to-the-ass button:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="keyframes">*/
+@keyframes translatePosition {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 9999999px -9999999px;
+	}
+}
+
+@keyframes fadeInTop {
+	from {
+		top: -100%;
+		opacity: 0
+	}
+	to {
+		top: 50%;
+		opacity: 1
+	}
+}
+
+
+/*</editor-fold>*/

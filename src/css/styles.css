@@ -323,6 +323,11 @@ section.main .btn.btn-black::before {
 	margin-bottom: 70px;
 }
 
+#to-the-ass .modal input[type='submit']:hover {
+	color: var(--main-color-black);
+	background-color: var(--main-color-white);
+}
+
 #to-the-ass .modal {
 	background-color: var(--main-color-black);
 }

@@ -108,6 +108,28 @@ input::placeholder {
 	background-color: var(--second-color-black);
 }
 
+.go-back {
+	cursor: pointer;
+	display: flex;
+	gap: 0 20px;
+	font-weight: 600;
+	font-size: 28px;
+	color: var(--main-color-black);
+}
+
+.go-back:hover::before {
+	transform: translateX(-10px);
+}
+
+.go-back::before {
+	content: '';
+	display: block;
+	width: 18px;
+	height: 35px;
+	background: url('img/icons/chevron-left.svg') center / cover no-repeat;
+	transition: transform .3s ease-in-out;
+}
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="sections">*/
@@ -117,28 +139,20 @@ section.main {
 	position: relative;
 	padding: 150px 0 100px 0;
 	height: calc(100vh - 250px);
-	background: url("./img/main/main-bg.png") right bottom / 714px auto no-repeat;
 }
 
-section.main .container::after {
-	content: '';
+section.main .rc {
 	position: absolute;
-	top: -21%;
+	top: 20%;
 	right: 0;
-	max-width: 640px;
-	max-height: 770px;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-	background: repeating-linear-gradient(
-			var(--main-color-black),
-			var(--main-color-black) 100px,
-			transparent 100px,
-			transparent 200px
-	);
-	width: 100%;
-	height: 100%;
 	z-index: -1;
-	/*animation: translatePosition 70000s linear infinite;*/
+}
+
+section.main .wrap__img {
+	position: relative;
+	max-width: 714px;
+	width: 100%;
+	z-index: 0;
 }
 
 section.main .logo__wrapper {
@@ -177,27 +191,54 @@ section.main .btns__wrapper {
 	gap: 20px;
 }
 
+
+section.main .btn {
+	position: relative;
+}
+
+section.main .btn::before {
+	content: '';
+	position: absolute;
+	bottom: calc(100% - 4px);
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 52px;
+	max-height: 52px;
+	width: 100%;
+	height: 100%;
+	background: url('img/icons/welcoming-person.svg') center / cover no-repeat;
+}
+
+section.main .btn.btn-black::before {
+	background: url('img/icons/facepalm-person.svg') center / cover no-repeat;
+}
+
 /*</editor-fold>*/
 
 /*</editor-fold>*/
 
 /*<editor-fold desc="modal">*/
 .modal-backdrop {
-	background-color: rgba(255, 255, 255, .95);
+	background-color: var(--main-color-white);
 	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 99;
+	inset: 0;
+	opacity: 0;
+	z-index: -99;
 	transition: opacity .3s ease-in-out;
 }
 
-.modal {
+.modal__wrap {
 	display: none;
-	overflow: auto;
+	transition: opacity .3s ease-in-out;
 	animation: fadeInTop .5s;
 	z-index: 100;
+}
+
+.modal {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	border: 1px solid var(--rare-color-light-grey);
 	border-radius: 20px;
 	background-color: var(--main-color-white);
@@ -207,7 +248,7 @@ section.main .btns__wrapper {
 	width: 100%;
 	height: 100%;
 	padding: 50px 50px 40px;
-	transition: opacity .3s ease-in-out;
+	margin-bottom: 76px;
 }
 
 .modal .modal-header {
@@ -215,6 +256,7 @@ section.main .btns__wrapper {
 	align-items: center;
 	justify-content: flex-start;
 	gap: 20px;
+	transition: margin-bottom .3s ease-in-out;
 }
 
 .modal .modal-body fieldset {
@@ -247,7 +289,41 @@ section.main .btns__wrapper {
 	flex-basis: 250px;
 }
 
-#to-the-ass {
+#want-know .modal-header {
+	margin-bottom: 150px;
+}
+
+#want-know .modal-body {
+	margin-bottom: 100px;
+}
+
+#want-know .success {
+	font-size: 14px;
+	color: var(--main-color-black);
+}
+
+#to-the-ass .success {
+	background-color: var(--main-color-black);
+	font-weight: 600;
+	font-size: 28px;
+	color: var(--main-color-white);
+}
+
+#to-the-ass .success::before {
+	content: '';
+	display: block;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	margin: 0 auto;
+	background: url('img/icons/allright.svg');
+}
+
+#to-the-ass .modal-header {
+	margin-bottom: 70px;
+}
+
+#to-the-ass .modal {
 	background-color: var(--main-color-black);
 }
 
@@ -259,11 +335,11 @@ section.main .btns__wrapper {
 	flex-direction: column;
 }
 
-#to-the-ass button {
+#to-the-ass input {
 	border-radius: 45px;
 }
 
-#to-the-ass button:not(:last-child) {
+#to-the-ass input:not(:last-child) {
 	margin-bottom: 10px;
 }
 
@@ -272,10 +348,13 @@ section.main .btns__wrapper {
 /*<editor-fold desc="keyframes">*/
 @keyframes translatePosition {
 	from {
-		background-position: 0 0;
+		top: -59%;
+		right: 8%;
 	}
+	
 	to {
-		background-position: 9999999px -9999999px;
+		top: -100%;
+		right: -100%;
 	}
 }
 

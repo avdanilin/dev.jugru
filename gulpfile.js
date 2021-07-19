@@ -65,7 +65,8 @@ function cssFonts() {
 function css() {
     return src(['src/libs/css/reset.css',
         'src/libs/css/normalize.css',
-        'src/css/**.css'])
+        'src/css/styles.css',
+        'src/css/responsive.css'])
         .pipe(!isProd ? sourcemaps.init() : util.noop())
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],

@@ -1,25 +1,383 @@
 /*<editor-fold desc="responsive">*/
-@media screen and (max-width: 1200px) {
+
+/*<editor-fold desc="container">*/
+@media (min-width: 576px) {
 	.container {
-		max-width: 1140px;
+		max-width: 540px;
 	}
 }
 
-@media screen and (max-width: 992px) {
-	.container {
-		max-width: 960px;
-	}
-}
-
-@media screen and (max-width: 768px) {
+@media (min-width: 768px) {
 	.container {
 		max-width: 720px;
 	}
 }
 
-@media screen and (max-width: 576px) {
+@media (min-width: 992px) {
 	.container {
-		max-width: 540px;
+		max-width: 960px;
 	}
 }
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+/*</editor-fold>*/
+
+/*<editor-fold desc="responsive view">*/
+@media screen  and (max-width: 1200px) {
+	.modal {
+		margin-bottom: 36px;
+		padding: 40px 40px 30px;
+	}
+	
+	.go-back {
+		font-size: 18px;
+	}
+	
+	.go-back::before {
+		width: 15px;
+		height: 24px;
+	}
+	
+	#want-know .modal-header {
+		margin-bottom: 36px;
+	}
+	
+	#want-know .modal-body {
+		margin-bottom: 20px;
+	}
+	
+	.modal .modal-title {
+		font-size: 24px;
+	}
+	
+	#to-the-ass .modal-title {
+		white-space: nowrap;
+	}
+	
+	#to-the-ass .modal-header {
+		margin-bottom: 40px;
+	}
+	
+	.modal .modal-header img {
+		max-width: 50px;
+	}
+	
+	.btn.btn-small {
+		font-size: 14px;
+		padding: 14px 30px;
+	}
+	
+	h1 {
+		font-size: 42px;
+	}
+	
+	.description {
+		font-size: 16px;
+	}
+	
+	.btn {
+		padding: 16px 20px;
+		font-size: 16px;
+	}
+	
+	section.main .logo__wrapper {
+		margin-bottom: 20px;
+	}
+	
+	section.main .h-block {
+		margin-bottom: 60px;
+	}
+	
+	section.main {
+		padding: 100px 0;
+		height: calc(100vh - 200px);
+	}
+	
+	section.main .wrap__img {
+		max-width: 580px;
+	}
+	
+	section.main .wrap__img::after {
+		top: -56%;
+		right: -2%;
+		width: 540px;
+		height: 490px;
+		background: repeating-linear-gradient(90deg, var(--main-color-black), var(--main-color-black) 60px, transparent 60px, transparent 140px);
+		animation: animatedBackground 6s linear infinite;
+	}
+	
+	@keyframes animatedBackground {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 540px 0;
+		}
+	}
+}
+
+@media screen  and (max-width: 992px) {
+	#to-the-ass .success {
+		font-size: 22px;
+	}
+	
+	section.main .wrap__img {
+		max-width: 420px;
+	}
+	
+	section.main .wrap__img::before {
+		content: unset;
+	}
+	
+	section.main .wrap__img::after {
+		top: -58%;
+		right: -8%;
+		width: 400px;
+		height: 400px;
+		background: repeating-linear-gradient(90deg, var(--main-color-black), var(--main-color-black) 60px, transparent 60px, transparent 100px);
+	}
+	
+	@keyframes animatedBackground {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 400px 0;
+		}
+	}
+	
+	section.main .lc {
+		flex-basis: 50%;
+	}
+	
+	section.main {
+		padding: 80px 0;
+		height: calc(100vh - 160px);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#to-the-ass .success {
+		font-size: 16px;
+		text-align: center;
+	}
+	
+	#to-the-ass .success::before {
+		width: 60px;
+		height: 60px;
+		margin: 0 auto 10px auto;
+	}
+	
+	#to-the-ass .success {
+		font-size: 14px;
+		font-weight: 500;
+		text-align: center;
+	}
+	
+	#to-the-ass .success::before {
+		width: 40px;
+		height: 40px;
+	}
+	
+	input {
+		padding: 12px;
+		font-size: 12px;
+	}
+	
+	input::placeholder {
+		font-size: 12px;
+	}
+	
+	.modal-footer .agree {
+		flex-basis: 210px;
+	}
+	
+	.agree a,
+	.agree {
+		font-size: 10px;
+	}
+	
+	.go-back::before {
+		width: 12px;
+		height: 18px;
+	}
+	
+	.go-back {
+		gap: 0 10px;
+		font-size: 14px;
+	}
+	
+	.modal {
+		padding: 20px 30px 40px 30px;
+		border: unset;
+		max-height: 310px;
+		min-height: unset;
+		display: flex;
+	}
+	
+	.btn.btn-small {
+		font-size: 12px;
+		padding: 10px 16px;
+	}
+	
+	.modal .modal-header img {
+		max-width: 40px;
+	}
+	
+	.modal .modal-title {
+		flex-basis: 200px;
+		font-size: 16px;
+	}
+	
+	.modal .modal-header {
+		gap: 10px;
+	}
+	
+	.modal .modal-body fieldset {
+		gap: 0 6px;
+	}
+	
+	section.main .rc {
+		top: 11%;
+	}
+	
+	section.main .wrap__img {
+		max-width: 380px;
+	}
+	
+	section.main .wrap__img::after {
+		width: 370px;
+		height: 350px;
+		background: repeating-linear-gradient(90deg, var(--main-color-black), var(--main-color-black) 50px, transparent 50px, transparent 90px);
+	}
+	
+	@keyframes animatedBackground {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 370px 0;
+		}
+	}
+	
+	section.main {
+		padding: 200px 0 100px 0;
+		height: calc(100vh - 300px);
+	}
+	
+	section.main .lc {
+		flex-basis: 60%;
+	}
+	
+	h1 {
+		font-size: 38px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: auto;
+	}
+	
+	#want-know .success {
+		font-size: 12px;
+	}
+	
+	#want-know .modal-header {
+		margin-bottom: 20px;
+	}
+	
+	.modal {
+		min-width: 260px;
+	}
+	
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	#want-know .modal {
+		padding: 0;
+	}
+	
+	section.main .wrap__img {
+		max-width: 400px;
+	}
+	
+	section.main {
+		padding: 230px 0 50px 0;
+		height: auto;
+	}
+	
+	section.main .rc {
+		top: 6%;
+	}
+	
+	section.main .lc {
+		flex-basis: 100%;
+	}
+	
+	section.main .logo__wrapper {
+		margin-bottom: 32px;
+	}
+	
+	h1 {
+		font-size: 28px;
+	}
+	
+	section.main h1 {
+		margin-bottom: 18px;
+	}
+	
+	section.main .btn::before {
+		max-width: 34px;
+		max-height: 34px;
+	}
+	
+	.btn {
+		font-size: 14px;
+		padding: 12px 18px;
+	}
+	
+	section.main .btns__wrapper {
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 42px 16px;
+	}
+	
+	section.main .wrap__img::before {
+		content: '';
+		position: absolute;
+		top: 29%;
+		right: 27%;
+		transform: rotate(45deg);
+		width: 130%;
+		height: 100%;
+		background-color: white;
+		z-index: -1;
+	}
+	
+	section.main .wrap__img::after {
+		width: 410px;
+		height: 390px;
+		background: repeating-linear-gradient(90deg, var(--main-color-black), var(--main-color-black) 50px, transparent 50px, transparent 100px);
+	}
+	
+	@keyframes animatedBackground {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 410px 0;
+		}
+	}
+}
+
+/*</editor-fold>*/
+
 /*</editor-fold>*/

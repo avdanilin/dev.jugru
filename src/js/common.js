@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.addEventListener('click', toggleModal)
     })
 
-
     function toggleModal() {
         const idModal = this.getAttribute('data-modal')
 
@@ -23,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         closedModal.forEach(closeItem => {
             closeItem.addEventListener('click', hideModal)
         })
+
 
         function hideModal() {
             setTimeout(() => {
@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.opacity = 1
         modal.style.transform = 'translate(-50%, -50%)'
 
+        if (id === 'want-know') {
+            modal.querySelector("input[type='email']").focus()
+        }
+
         modal.addEventListener('submit', (e) => {
             e.preventDefault()
 
@@ -61,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 successText = 'Спасибо, что поделились!'
 
             } else {
-                modal.querySelector('.modal-header').style.marginBottom = 50 + 'px'
                 successText = 'Спасибо, что подписались на нашу рассылку!'
             }
 
@@ -87,5 +90,4 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.style.display = 'none'
         }, 400)
     }
-
 })
